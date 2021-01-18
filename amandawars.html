@@ -21,11 +21,17 @@
 </head>
 <body>
 
-    <video id="video" controls style="width: 100%; height: 100%;">
+    <video id="video" fullscreen autoPlay controls autoplay name="media" style="width: 100%; height: 100%;">
         <source src="sw.mp4" type="video/mp4">
     </video>
    
     <script>
+
+setTimeout(function(){
+    // document.getElementById('video').muted = true;
+    document.getElementById('video').load();  
+    //  document.getElementById('video').play();
+ },1000);
 
         // const intro = 'Há alguns horas atrás, e nessa mesma galáxia....'
         // const text = 
@@ -55,7 +61,7 @@
         // // https://starwarsintrocreator.kassellabs.io/#!/CMRMOBOFQhr86lyOAQP7/edit
 
 
-        
+        document.querySelector('video').setAttribute('muted', true)
     </script>
 </body>
 </html>
